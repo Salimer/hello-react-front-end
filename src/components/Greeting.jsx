@@ -8,13 +8,12 @@ function Greeting() {
   const isLoading = useSelector((store) => store.message.isLoading);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchGreeting())
-  }, [dispatch])
+    dispatch(fetchGreeting());
+  }, [dispatch]);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
-  console.log(greetingMsg.type)
 
   return (
     <div>
